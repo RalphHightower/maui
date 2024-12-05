@@ -211,7 +211,7 @@ namespace Microsoft.Maui.Handlers
 			{
 				return;
 			}
-			
+
 			await InitialCookiePreloadIfNecessary(url);
 			var cookies = myCookieJar.GetCookies(uri);
 
@@ -371,7 +371,7 @@ namespace Microsoft.Maui.Handlers
 				if (Handler is WebViewHandler handler)
 				{
 					sender.UpdateUserAgent(handler.VirtualView);
-				    if (sender.Source is not null)
+					if (sender.Source is not null)
 					{
 						handler.SyncPlatformCookies(sender.Source.ToString()).FireAndForget();
 					}
