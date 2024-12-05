@@ -71,24 +71,24 @@ namespace Microsoft.Maui.Platform
 		static void OnInputScopePropertyChanged(DependencyObject sender, DependencyProperty dp)
 		{
 
-/* Unmerged change from project 'Core(net9.0-windows10.0.20348.0)'
-Before:
-			if (sender is not MauiPasswordTextBox mauiTxtBox || mauiTxtBox.IsPassword)
-After:
-			if (sender is not MauiPasswordTextBox mauiTxtBox || MauiPasswordTextBox.IsPassword)
-*/
+			/* Unmerged change from project 'Core(net9.0-windows10.0.20348.0)'
+			Before:
+						if (sender is not MauiPasswordTextBox mauiTxtBox || mauiTxtBox.IsPassword)
+			After:
+						if (sender is not MauiPasswordTextBox mauiTxtBox || MauiPasswordTextBox.IsPassword)
+			*/
 			if (sender is not MauiPasswordTextBox mauiTxtBox || IsPassword)
 			{
 				return;
 			}
 
 
-/* Unmerged change from project 'Core(net9.0-windows10.0.20348.0)'
-Before:
-			mauiTxtBox.IsPassword = mauiTxtBox.InputScope?.Names?.Any(x => x.NameValue == InputScopeNameValue.Password) ?? false;
-After:
-			MauiPasswordTextBox.IsPassword = mauiTxtBox.InputScope?.Names?.Any(x => x.NameValue == InputScopeNameValue.Password) ?? false;
-*/
+			/* Unmerged change from project 'Core(net9.0-windows10.0.20348.0)'
+			Before:
+						mauiTxtBox.IsPassword = mauiTxtBox.InputScope?.Names?.Any(x => x.NameValue == InputScopeNameValue.Password) ?? false;
+			After:
+						MauiPasswordTextBox.IsPassword = mauiTxtBox.InputScope?.Names?.Any(x => x.NameValue == InputScopeNameValue.Password) ?? false;
+			*/
 			IsPassword = mauiTxtBox.InputScope?.Names?.Any(x => x.NameValue == InputScopeNameValue.Password) ?? false;
 		}
 
@@ -307,7 +307,7 @@ After:
 			}
 		}
 
-		void UpdatePasswordIfNeeded()
+		static void UpdatePasswordIfNeeded()
 		{
 			var updatedPassword = DetermineTextFromPassword(MauiPasswordTextBox.Password, SelectionStart, Text);
 

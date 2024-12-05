@@ -139,13 +139,13 @@ namespace Microsoft.Maui.Platform
 			_rootView.Toolbar = toolBar as MauiToolbar;
 		}
 
-		internal string? WindowTitle
+		internal static string? WindowTitle
 		{
 			get => WindowRootView.WindowTitle;
 			set => WindowRootView.WindowTitle = value;
 		}
 
-		internal void SetTitle(string? title) =>
+		internal static void SetTitle(string? title) =>
 			WindowRootView.WindowTitle = title;
 
 		internal void SetTitleBar(ITitleBar? titlebar, IMauiContext? mauiContext)
