@@ -201,7 +201,7 @@ namespace Microsoft.Maui.Platform
 				if (MauiPasswordTextBox.IsObfuscationDelayed)
 					DelayObfuscation();
 				else
-					ImmediateObfuscation();
+					MauiPasswordTextBox.ImmediateObfuscation();
 			}
 			else if (Text != MauiPasswordTextBox.Password)
 			{
@@ -254,7 +254,7 @@ namespace Microsoft.Maui.Platform
 			}
 		}
 
-		void ImmediateObfuscation()
+		static void ImmediateObfuscation()
 		{
 			UpdatePasswordIfNeeded();
 		}
